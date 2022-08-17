@@ -20,4 +20,4 @@ class CustomImagesPipeline(ImagesPipeline):
 
     def file_path(self, request, response=None, info=None, *, item=None):
         image_name = slugify(item.get('title'), max_length=200)
-        return f'full/{image_name}.jpg'
+        return f'{image_name}/{image_name}.jpg'
